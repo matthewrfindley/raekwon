@@ -1,22 +1,22 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'raekwon/version'
+$:.push File.expand_path("../lib", __FILE__)
 
-Gem::Specification.new do |gem|
-  gem.name          = "raekwon"
-  gem.version       = Raekwon::VERSION
-  gem.authors       = ["Matthew Findley"]
-  gem.email         = ["findley@substantial.com"]
-  gem.description   = %q{Cooking up some marvelous shit to get your mouth water}
-  gem.summary       = %q{Provides an easy way to start a working style guide within your application}
-  gem.homepage      = ""
+# Maintain your gem's version:
+require "raekwon/version"
 
-  gem.files         = `git ls-files`.split($/)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "raekwon"
+  s.version     = Raekwon::VERSION
+  s.authors     = ["TODO: Your name"]
+  s.email       = ["TODO: Your email"]
+  s.homepage    = "TODO"
+  s.summary     = "TODO: Summary of Raekwon."
+  s.description = "TODO: Description of Raekwon."
 
-  gem.add_dependency('haml', '~> 3.1.7')
-  gem.add_dependency('rails', '> 3.2.0')
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+
+  s.add_dependency "rails", ">= 3.2.0"
+  s.add_dependency "haml", ">= 3.1.0"
+
+  s.add_development_dependency "sqlite3"
 end
