@@ -1,7 +1,11 @@
 require "raekwon/version"
 
 module Raekwon
-  # Your code goes here...
+  mattr_accessor :app_root
+
+  def self.setup
+    yield self
+  end
 end
 
 require "raekwon/engine"

@@ -18,4 +18,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency('haml', '~> 3.1.7')
+  gem.add_dependency('rails', '> 3.2.0')
 end
